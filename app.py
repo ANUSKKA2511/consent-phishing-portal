@@ -45,7 +45,6 @@ def submit():
     if "participant_id" not in session:
         return redirect(url_for("consent"))
     pid = session["participant_id"]
-    # Do NOT read request.form["password"] — only log the event.
     log_event(pid, "credential_submission_simulated")
     return redirect(url_for("training"))
 
@@ -66,11 +65,10 @@ def quiz():
 def quiz_submit():
     if "participant_id" not in session:
         return redirect(url_for("consent"))
-    # Three questions, each worth 1 point
     answers = {
-        "q1": "b",   # hover over links
-        "q2": "c",   # type the URL directly
-        "q3": "a",   # report to IT
+        "q1": "b",
+        "q2": "c",
+        "q3": "a",
     }
     score = sum(1 for q, correct in answers.items()
                 if request.form.get(q) == correct)
