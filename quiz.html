@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing Awareness Quiz</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="progress">
+      <div class="step done"></div>
+      <div class="step done"></div>
+      <div class="step done"></div>
+      <div class="step active"></div>
+    </div>
+
+    <h1>🧠 Quick Quiz — 3 Questions</h1>
+    <form method="POST" action="/quiz_submit">
+
+      <p><strong>1. You receive an email link. What should you do first?</strong></p>
+      <label class="quiz-option"><input type="radio" name="q1" value="a"> Click it — it's probably fine</label>
+      <label class="quiz-option"><input type="radio" name="q1" value="b"> Hover over it and inspect the real URL</label>
+      <label class="quiz-option"><input type="radio" name="q1" value="c"> Forward it to a colleague</label>
+
+      <p style="margin-top:24px;"><strong>2. You need to log into your company portal. Safest approach?</strong></p>
+      <label class="quiz-option"><input type="radio" name="q2" value="a"> Use the link in the email</label>
+      <label class="quiz-option"><input type="radio" name="q2" value="b"> Search Google and click the first ad</label>
+      <label class="quiz-option"><input type="radio" name="q2" value="c"> Type the known URL directly into the browser</label>
+
+      <p style="margin-top:24px;"><strong>3. You think you clicked a phishing link. What now?</strong></p>
+      <label class="quiz-option"><input type="radio" name="q3" value="a"> Report it to IT immediately</label>
+      <label class="quiz-option"><input type="radio" name="q3" value="b"> Ignore it and hope for the best</label>
+      <label class="quiz-option"><input type="radio" name="q3" value="c"> Delete the email and move on</label>
+
+      <button class="btn btn-green" type="submit" style="margin-top:24px;">Submit Answers</button>
+    </form>
+  </div>
+</body>
+</html>

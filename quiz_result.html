@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="progress">
+      <div class="step done"></div>
+      <div class="step done"></div>
+      <div class="step done"></div>
+      <div class="step done"></div>
+    </div>
+
+    <h1>📊 Your Score</h1>
+
+    {% if score == total %}
+      <div class="celebrate">🎉 Perfect score — {{ score }}/{{ total }}! You're phishing-resistant.</div>
+    {% elif score >= 2 %}
+      <div class="celebrate" style="background: linear-gradient(135deg,#f59e0b,#d97706);">
+        👍 Good job — {{ score }}/{{ total }}. Review the red flags and try again.
+      </div>
+    {% else %}
+      <div class="celebrate" style="background: linear-gradient(135deg,#ef4444,#b91c1c);">
+        ⚠️ {{ score }}/{{ total }} — Please review the training material again.
+      </div>
+    {% endif %}
+
+    <h2>Correct answers</h2>
+    <div class="flag"><strong>Q1:</strong> Hover over links and inspect the real URL before clicking.</div>
+    <div class="flag"><strong>Q2:</strong> Type the known URL directly instead of using email links.</div>
+    <div class="flag"><strong>Q3:</strong> Report suspected phishing to IT immediately.</div>
+
+    <p style="margin-top:24px;">
+      <a href="/report" class="btn">View Anonymised Report</a>
+      <a href="/" class="btn btn-green" style="margin-left:8px;">Restart</a>
+    </p>
+  </div>
+</body>
+</html>

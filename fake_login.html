@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT Portal — Sign In</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card" style="max-width:460px;">
+    <div class="progress">
+      <div class="step done"></div>
+      <div class="step active"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+
+    <div class="browser-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="url">https://it-portal.company-secure-login.com/verify</span>
+    </div>
+
+    <div style="padding: 28px 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 10px 10px;">
+      <h2>🔐 Session Expired</h2>
+      <p style="color:#6b7280; font-size:15px;">
+        Your session timed out. Please re-enter your credentials to continue.
+      </p>
+      <form method="POST" action="/submit">
+        <input type="email" name="email" placeholder="Work email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button class="btn" type="submit" style="width:100%; margin-top:12px;">Sign In</button>
+      </form>
+      <p style="text-align:center; font-size:13px; color:#9ca3af; margin-top:16px;">
+        Having trouble? <a href="#" style="color:#2a5298;">Contact IT</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consent Required</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="progress">
+      <div class="step active"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+    <h1>🎣 Phishing Awareness Simulation</h1>
+    <p style="font-size:16px; line-height:1.6;">
+      You are invited to take part in a <strong>short, safe training simulation</strong>.
+      Please read the terms below before continuing.
+    </p>
+    <div class="flag"><strong>🔒 No real credentials are stored.</strong> The login page you will see is fake — only the fact that you clicked "Submit" is recorded.</div>
+    <div class="flag"><strong>🕵️ Your identity is anonymised.</strong> You will be assigned a random participant ID such as <code>P-143022</code>.</div>
+    <div class="flag"><strong>↩️ You can stop at any time.</strong> Closing this tab ends the simulation.</div>
+    <form method="POST" action="/start">
+      <button class="btn" type="submit">I Consent — Start the Simulation</button>
+    </form>
+  </div>
+</body>
+</html>

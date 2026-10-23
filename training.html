@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulation Reveal — Red Flags</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="progress">
+      <div class="step done"></div>
+      <div class="step done"></div>
+      <div class="step active"></div>
+      <div class="step"></div>
+    </div>
+
+    <h1>⚠️ This Was a Simulation</h1>
+    <p style="font-size:16px; line-height:1.6;">
+      You just submitted credentials to a <strong>fake</strong> login page. Nothing was stored —
+      but in a real attack, those details would now belong to an attacker.
+    </p>
+
+    <h2 style="margin-top:28px;">🚩 Red flags you could have spotted</h2>
+    <div class="flag"><strong>1. The URL was fake.</strong> <code>it-portal.company-secure-login.com</code> is not your company domain — the real domain is at the end before the first slash.</div>
+    <div class="flag"><strong>2. "Session expired" pressure.</strong> Attackers use urgency so you don't stop to check.</div>
+    <div class="flag"><strong>3. Credential re-entry.</strong> Legitimate portals almost never ask you to re-type your password from an email link.</div>
+    <div class="flag"><strong>4. No padlock / no MFA prompt.</strong> Real corporate logins usually ask for an authenticator code.</div>
+
+    <h2 style="margin-top:28px;">✅ What to do next time</h2>
+    <ul style="font-size:15px; line-height:1.8;">
+      <li>Hover over links and read the URL before clicking.</li>
+      <li>Type the known URL directly instead of following email links.</li>
+      <li>Report suspicious messages to IT immediately.</li>
+    </ul>
+
+    <a href="/quiz" class="btn btn-green">Take the 30-second Quiz →</a>
+  </div>
+</body>
+</html>
